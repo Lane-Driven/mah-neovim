@@ -7,7 +7,7 @@ function M.apply(bufnr)
     local opts = { buffer = bufnr, nowait = true }
 
     -- New file: n
-    map("n", "n", actions.create_file, opts)
+    map("n", "f", actions.create_file, opts)
 
     -- New directory: d
     map("n", "d", actions.create_directory, opts)
