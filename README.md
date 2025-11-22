@@ -1,6 +1,7 @@
 
 # TODO:
 #### Daashboard:
+- [ ] Learn how to properly fill out a README.md
 - [ ] Fix daily quote display.  Should not extend past the project/mru listings.
 
 Projects/MRU path names could potentially be extremely long.  Consider truncating the text for the path name to
