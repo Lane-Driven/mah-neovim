@@ -1,14 +1,15 @@
-#### README
 
 # TODO:
-- Fix daily quote display.  Should not extend past the project/mru listings.
-- Correct file creation in Netrw floating window.
-<details>
-    <summary><strong>File creation error.</strong></summary>
-    >New file: README.mdE5108: Error executing lua: vim/_editor.lua:0: nvim_exec2(), line 1: Vim(edit):E32: No file name
-    stack traceback:
-        [C]: in function 'nvim_exec2'
-        vim/_editor.lua: in function 'cmd'
-        ...rs/lanemaynor/.config/nvim/lua/config/netrw/file_ops.lua:21: in function 'restore_context'
-        /Users/lanemaynor/.config/nvim/lua/config/netrw/actions.lua:23: in function </Users/lanemaynor/.config/nvim/lua/config/netrw/actions.lua:6>   
-</details>
+#### Daashboard:
+- [ ] Fix daily quote display.  Should not extend past the project/mru listings.
+
+Projects/MRU path names could potentially be extremely long.  Consider truncating the text for the path name to
+the last 'x' directories as well as a hard limit on characters.  Perhaps a good starting point would be 50 characters
+max including '../' at some erlier directory.
+
+For example:
+../Thispath/hasanextremelylongname/sowetruncate.sh
+
+../Thisfilegottruncated/aswell.cpp
+
+..never_should.i.ever.have_afilename_this_long.cpp
