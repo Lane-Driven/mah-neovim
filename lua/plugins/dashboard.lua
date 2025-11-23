@@ -1,3 +1,14 @@
+local function shorten_path(path, max)
+    if #path <= max then 
+        return path
+    end
+
+    local filename = path:match("[^/]+$")
+    local dir = path:sub(1, #path - #filename)
+
+    return "..." .. filename
+end
+
 return {
   "nvimdev/dashboard-nvim",
   event = "VimEnter",
@@ -32,7 +43,7 @@ return {
       if not entry or not entry.text then
         return "Stay sharp. (Malformed quote entry)"
       end
-
+        
       local author = entry.from or "Unknown"
       return entry.text .. " — " .. author
     end
