@@ -22,5 +22,4 @@ vim.opt.rtp:prepend(lazypath)
 require("settings")
 require("keymaps")
 require("lazy").setup("plugins") -- This is the directory they are in, for example "lua/plugins/treesitter.lua"
-require("config")
 require("lsp")
